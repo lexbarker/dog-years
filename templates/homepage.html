@@ -5,7 +5,7 @@
 <body>
   <p><h1>How Old Is My Dog</h1></p>
   <p>Dogs are supposed to age 7 years for every calander year, input your dogs calander age to work out the Dog Age</p>
-  <p><form action="https://dog-years.herokuapp.com/calc" method="post">
+  <p><form action={{ addy }} + "/calc" method="post">
     <label for="years">Calander years</label>
     <input name="years" id="years" required>
     <input type = "submit" value = "Calculate dog years" />
