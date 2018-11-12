@@ -18,9 +18,14 @@ def home():
 @app.route('/calc', methods=['POST'])
 def calc_dog_years():
     dage = request.form['years']
-    dog_age = int(dage) * 7
+    try:
+        dog_age = int(dage) * 7
+        return render_template('dogyears.html', addy = DOGTAG, age = dog_age)
+    except:
+        return render_template('homepage.html', addy = DOGTAG)
 
-    return render_template('dogyears.html', addy = DOGTAG, age = dog_age)
+
+
 if __name__ == '__main__':
 
    app.run()
